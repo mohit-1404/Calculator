@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans"
+        android:lines="1"
+        android:maxLines="2"
+        android:paddingEnd="20dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/noto_sans"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonOperator"
+                android:id="@+id/clear_text"
+                android:layout_weight="1"
+                android:text="C" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonOperator"
+                android:layout_weight="1"
+                android:text="%" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonOperator"
+                android:layout_weight="1"
+                android:text="⌫" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonOperator"
+                android:layout_weight="1"
+                android:text="/" />
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="7" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="8" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="9" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonOperator"
+                android:layout_weight="1"
+                android:text="*" />
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="4" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="5" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="6" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonOperator"
+                android:layout_weight="1"
+                android:text="-" />
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="1" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="2" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="3" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonOperator"
+                android:layout_weight="1"
+                android:text="+" />
+        </LinearLayout>
+
+        <!-- Row 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="0" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/buttonNumber"
+                android:layout_weight="1"
+                android:text="." />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="170dp"
+                android:layout_height = "72dp"
+                android:background = "@null"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:text="="
+                android:onClick="finalAction"
+                android:layout_margin="12dp"
+             />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
